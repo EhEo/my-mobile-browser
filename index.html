@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Browser</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="tabs">
+            <button class="tab" onclick="openTab('tab1')">Tab 1</button>
+            <button class="tab" onclick="openTab('tab2')">Tab 2</button>
+        </div>
+        <button class="settings-button" onclick="openSettings()">⚙️</button>
+    </header>
+    <div id="content">
+        <iframe id="tab1" class="tab-content" src=""></iframe>
+        <iframe id="tab2" class="tab-content" src=""></iframe>
+    </div>
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSettings()">&times;</span>
+            <h2>Settings</h2>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button onclick="saveSettings()">Save</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
